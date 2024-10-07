@@ -1,0 +1,35 @@
+/* All Selector */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Color Example */
+
+:root {
+    --white: #fff;
+	--secondary-white: #dfdfdf;
+    --black: #121212;
+	--gray: #36454f;
+    --yellow: #ffdb56;
+	--primary-black: #1d1f1f;
+	--orange: #E88B00;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--gray);
+    border-radius: 10px;
+}
