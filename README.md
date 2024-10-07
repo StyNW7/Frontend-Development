@@ -6,4 +6,3 @@ Front-end Development Repository that you need to start from zero to hero in mak
 Maintain by:
 <br>
 Stanley Nathanael Wijaya
-

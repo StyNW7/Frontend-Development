@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.contact {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.contact td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.contact tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
