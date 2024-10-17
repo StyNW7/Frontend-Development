@@ -1,19 +1,41 @@
+/* Template */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--gray);
+    border-radius: 10px;
+}
+
+
+
+/* CSS */
+
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(to right, #6a11cb, #2575fc);
     font-family: 'Arial', sans-serif;
 }
 
 .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
     padding: 20px;
@@ -45,4 +67,68 @@ body {
 .cta-button:hover {
     background-color: #2575fc;
     color: white;
+}
+
+/* New Section */
+
+#new-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    color: white;
+}
+
+.divider {
+    margin: 25px 0;
+}
+
+#new-section2 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    color: white;
+}
+
+#new-section2 h1, #new-section2 p {
+    text-align: right;
+}
+
+
+/* Image Section */
+
+#image-section {
+    min-height: 100vh;
+    background-image: url(assets/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Media Queries Sample */
+
+
+@media (max-width: 600px) {
+
+    body {
+        background: #f0f0f0;
+        background-position: top;
+        opacity: 1;
+        color: black;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: black;
+    }
+
+    p {
+        color: black;
+        font-size: 14px;
+    }
+    
 }
