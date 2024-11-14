@@ -34,6 +34,7 @@ function addTask() {
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-button";
     deleteButton.textContent = "Hapus";
+
     deleteButton.addEventListener("click", function() {
         taskList.removeChild(li);
     });
@@ -47,4 +48,5 @@ function addTask() {
     taskList.appendChild(li);
     
     taskInput.value = "";
+    
 }
