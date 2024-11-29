@@ -42,10 +42,14 @@ window.onload = function(){
     let button = document.getElementById("mybutton");
 
     button.addEventListener("click", () => {
+        
         let name = prompt("Input your name, please");
+        name = name.trim();
+
         if (name) {
             button.innerHTML = "Welcome, " + name;
         }
+        
     });
 
 }
