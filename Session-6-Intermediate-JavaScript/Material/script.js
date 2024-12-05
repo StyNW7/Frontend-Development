@@ -29,8 +29,10 @@ console.log(arr2); // Output: [1, 2, 3, 4, 5]
 
 function sum(...numbers) {
     return numbers.reduce((total, num) => total + num, 0);
-  }
-  console.log(sum(1, 2, 3, 4)); // Output: 10
+}
+
+
+console.log(sum(1, 2, 3, 4)); // Output: 10
 
 
 // Async/Await
@@ -46,7 +48,23 @@ async function fetchData() {
     }
 }
 
+
 fetchData();
+
+
+// function fetchData2() {
+//     try {
+//         console.log("Data 2")
+//         const response = fetch('https://jsonplaceholder.typicode.com/todos/1');
+//         const data = response.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.error("Error fetching data:", error);
+//     }
+// }
+
+
+// fetchData2();
 
 
 // Callback Function
