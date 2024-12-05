@@ -2,13 +2,17 @@
 
 
 async function fetchTodos() {
+
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/users?_limit=10');
     const todos = await response.json();
     displayTodos(todos);
-  } catch (error) {
+  } 
+  
+  catch (error) {
     console.error("Failed to fetch todos:", error);
   }
+
 }
 
 
@@ -16,14 +20,22 @@ async function fetchTodos() {
 
 
 function displayTodos(todos) {
+
   const todoList = document.getElementById('todoList');
   todoList.innerHTML = ''; // Clear existing todos
+
+  todos.forEach((todo) => {
+    const item = document.createElement('li');
+    item.textContent = todo.name;
+    todoList.appendChild(item);
+  });
 
   todos.forEach(({ address }) => {
     const item = document.createElement('li');
     item.textContent = address.street;
     todoList.appendChild(item);
   });
+
 }
   
 
@@ -34,20 +46,22 @@ function addTodo() {
   
   const title = document.getElementById('todoInput').value;
   if (!title) return;
+  document.getElementById('todoInput').value = ''
+  displayNewTodo(title)
 
-  fetch('https://jsonplaceholder.typicode.com/todos', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ title, completed: false }),
-  })
-    .then(response => response.json())
-    .then(newTodo => {
-      displayNewTodo(newTodo);
-      document.getElementById('todoInput').value = ''; // Clear input field
-    })
-    .catch(error => console.error("Error adding todo:", error));
+  // fetch('https://jsonplaceholder.typicode.com/todos', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({ title, completed: false }),
+  // })
+  //   .then(response => response.json())
+  //   .then(newTodo => {
+  //     displayNewTodo(newTodo);
+  //     document.getElementById('todoInput').value = ''; // Clear input field
+  //   })
+  //   .catch(error => console.error("Error adding todo:", error));
 
 }
   
@@ -56,10 +70,13 @@ function addTodo() {
 
 
 function displayNewTodo(todo) {
+
   const todoList = document.getElementById('todoList');
   const item = document.createElement('li');
-  item.textContent = todo.title;
+  // item.textContent = todo.title;
+  item.textContent = todo;
   todoList.appendChild(item);
+  
 }
 
 
