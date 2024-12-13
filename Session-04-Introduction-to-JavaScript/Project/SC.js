@@ -37,7 +37,7 @@ function solver() {
       let z = eval(a);
       document.getElementById("result").value = z;
 
-  } 
+  }
 
   catch(e){
   
