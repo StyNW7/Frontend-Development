@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Test",
+    "author": "Test",
+    "content": "Hello",
+    "id": 1
+  },
+  {
+    "title": "Frontend",
+    "author": "Stanz",
+    "content": "Hai",
+    "id": 2
+  },
+  {
+    "title": "Haii",
+    "author": "halo",
+    "content": "test",
+    "id": 3
+  },
+  {
+    "title": "blabla",
+    "author": "4",
+    "content": "4",
+    "id": 4
+  },
+  {
+    "title": "Stanz",
+    "author": "bruhh",
+    "content": "bruhh",
+    "id": 5
+  }
+]

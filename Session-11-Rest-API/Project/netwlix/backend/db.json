@@ -1,0 +1,11 @@
+{
+    "movies": [
+        {
+        "id": 1,
+        "title": "Inception",
+        "genre": "Sci-Fi",
+        "description": "Dream manipulation.",
+        "trailer": "https://www.youtube.com/watch?v=8hP9D6kZseM"
+        }
+    ]
+}
