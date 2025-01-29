@@ -12,31 +12,43 @@ function App() {
   
   const [blogs, setBlogs] = useState([]);
 
+
   // Load data blogs dari backend
+
   useEffect(() => {
     axios.get(API_URL).then((response) => {
       setBlogs(response.data);
     });
   }, []);
 
+
   // Tambahkan blog baru
+
   const addBlog = (newBlog) => {
     axios.post(API_URL, newBlog).then((response) => {
       setBlogs([...blogs, response.data]); // Update state blogs
     });
   };
+  
 
   return (
+
     <BrowserRouter>
+
       <div className="min-h-screen bg-gray-100 text-gray-800">
+
         <Navbar />
+
         <Routes>
           <Route path="/" element={<Home blogs={blogs} />} />
           <Route path="/add" element={<AddBlog addBlog={addBlog} />} />
           <Route path="/blog/:id" element={<BlogDetail blogs={blogs} />} />
         </Routes>
+
       </div>
+
     </BrowserRouter>
+
   );
 }
 
