@@ -58,8 +58,11 @@ const App = () => {
         <div className="w-full max-w-lg mx-auto">
 
           <h1 className="text-4xl font-bold text-center mb-6">Music Player</h1>
+
           <SongList songs={songs} onSongSelect={playPauseHandler} />
+
           <MusicPlayer currentSong={currentSong} />
+
           <PlayerControls
             isPlaying={isPlaying}
             playPauseHandler={() => playPauseHandler(currentSong)}
@@ -73,6 +76,7 @@ const App = () => {
     </div>
 
   );
+  
 };
 
 export default App;
