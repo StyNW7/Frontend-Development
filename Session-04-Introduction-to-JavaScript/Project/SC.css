@@ -7,7 +7,7 @@
      font-family:"Poppins", sans-serif;
  }
 body {
-    background:linear-gradient(#faea5a, #0fa37d);
+    background:linear-gradient(#d498ff, #0fa37d);
     min-height:100vh;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ body {
 }
 .board{
     background:#dfdfdf;
-    color:111;
+    color: blue;
     width:100%;
     height:50px;
     font-size:14pt;

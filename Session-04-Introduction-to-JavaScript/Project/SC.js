@@ -34,7 +34,10 @@ function solver() {
 
       let a = document.getElementById("result").value;
   
+        // "450*3"
+
       let z = eval(a);
+
       document.getElementById("result").value = z;
 
   }

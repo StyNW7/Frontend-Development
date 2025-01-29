@@ -15,7 +15,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Handle form submission here
+    console.log(formData);
   }
 
   return (
@@ -27,6 +27,7 @@ const Contact = () => {
         <h2 className="text-3xl font-bold text-gray-800">Contact</h2>
 
         <form onSubmit={handleSubmit} className="mt-8">
+
           <input
             type="text"
             name="name"
@@ -35,6 +36,7 @@ const Contact = () => {
             onChange={handleChange}
             className="block w-full px-4 py-2 border rounded-lg mb-4"
           />
+
           <input
             type="email"
             name="email"
@@ -43,6 +45,7 @@ const Contact = () => {
             onChange={handleChange}
             className="block w-full px-4 py-2 border rounded-lg mb-4"
           />
+
           <textarea
             name="message"
             placeholder="Your Message"
@@ -50,7 +53,9 @@ const Contact = () => {
             onChange={handleChange}
             className="block w-full px-4 py-2 border rounded-lg mb-4"
           />
+
           <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-lg">Send Message</button>
+
         </form>
 
       </div>
