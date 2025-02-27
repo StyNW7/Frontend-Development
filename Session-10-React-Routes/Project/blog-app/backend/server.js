@@ -1,3 +1,5 @@
+// Template Express
+
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
@@ -8,10 +10,17 @@ app.use(cors());
 app.use(express.json());
 
 
+// Constants Nama File (Database) => File .json
+
+
 const DATA_FILE = './blogs.json';
 
 
+// Endpoints
+
+
 // Endpoint untuk mendapatkan semua blog
+
 
 app.get('/blogs', (req, res) => {
   fs.readFile(DATA_FILE, 'utf8', (err, data) => {
@@ -50,5 +59,10 @@ app.post('/blogs', (req, res) => {
 
 });
 
+
+// CONST PORT = 5000 => Artinya link API atau Backend bakal kebuka di PORT 5000
+
+
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
